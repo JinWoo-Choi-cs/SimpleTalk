@@ -6,3 +6,4 @@ C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Se
 C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server.csproj.GenerateResource.cache
 C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server_Client.exe
 C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server_Client.pdb
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server.csprojAssemblyReference.cache
