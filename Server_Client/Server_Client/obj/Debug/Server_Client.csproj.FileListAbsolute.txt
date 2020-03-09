@@ -1,0 +1,9 @@
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\bin\Debug\Server_Client.exe.config
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\bin\Debug\Server_Client.exe
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\bin\Debug\Server_Client.pdb
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server_Client.csprojAssemblyReference.cache
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server_Client.MainForm.resources
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server_Client.Properties.Resources.resources
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server_Client.csproj.GenerateResource.cache
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server_Client.exe
+C:\Hasel\_git\CSharpProjects\SimpleTalk\Server_Client\Server_Client\obj\Debug\Server_Client.pdb
