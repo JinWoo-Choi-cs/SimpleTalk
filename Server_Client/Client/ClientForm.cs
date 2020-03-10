@@ -33,13 +33,14 @@ namespace Client
             if (ClientSocket != null) ClientSocket.Dispose();
         }
       
-
         private void btn_connect_Click(object sender, EventArgs e)
         {
             try
             {
-                IPEndPoint ServerEP = new IPEndPoint(IPAddress.Parse(tb_ipaddress_setting.Text), int.Parse(tb_port_setting.Text));
-                ClientSocket.Connect(ServerEP);
+                ClientSocket = new Socket(SocketType.Stream, ProtocolType.IP);
+
+                IPEndPoint RemoteEP = new IPEndPoint(IPAddress.Parse(tb_ipaddress_setting.Text), int.Parse(tb_port_setting.Text));
+                ClientSocket.Connect(RemoteEP);
 
                 rtb_client_log.Text += "Server Connected" + _NL_;
                 btn_connect.Enabled = false;
@@ -55,7 +56,9 @@ namespace Client
         {
             try
             {
-                ClientSocket.Disconnect(true);
+                ClientSocket.Shutdown(SocketShutdown.Both);
+                ClientSocket.Close();
+                ClientSocket.Dispose();
 
                 rtb_client_log.Text += "Server Disconnected" + _NL_;
                 btn_connect.Enabled = true;

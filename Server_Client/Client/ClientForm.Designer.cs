@@ -44,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.rtb_error_log = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lv_handle_client
@@ -54,9 +55,9 @@
             this.ch_buffersize,
             this.ch_bufferlength});
             this.lv_handle_client.HideSelection = false;
-            this.lv_handle_client.Location = new System.Drawing.Point(12, 221);
+            this.lv_handle_client.Location = new System.Drawing.Point(12, 308);
             this.lv_handle_client.Name = "lv_handle_client";
-            this.lv_handle_client.Size = new System.Drawing.Size(297, 331);
+            this.lv_handle_client.Size = new System.Drawing.Size(297, 244);
             this.lv_handle_client.TabIndex = 12;
             this.lv_handle_client.UseCompatibleStateImageBehavior = false;
             this.lv_handle_client.View = System.Windows.Forms.View.Details;
@@ -83,7 +84,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 10F);
-            this.label4.Location = new System.Drawing.Point(13, 202);
+            this.label4.Location = new System.Drawing.Point(12, 272);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 16);
             this.label4.TabIndex = 11;
@@ -100,7 +101,7 @@
             // btn_disconnect
             // 
             this.btn_disconnect.Font = new System.Drawing.Font("Arial", 10F);
-            this.btn_disconnect.Location = new System.Drawing.Point(114, 96);
+            this.btn_disconnect.Location = new System.Drawing.Point(160, 188);
             this.btn_disconnect.Name = "btn_disconnect";
             this.btn_disconnect.Size = new System.Drawing.Size(86, 40);
             this.btn_disconnect.TabIndex = 8;
@@ -111,7 +112,7 @@
             // btn_connect
             // 
             this.btn_connect.Font = new System.Drawing.Font("Arial", 10F);
-            this.btn_connect.Location = new System.Drawing.Point(12, 96);
+            this.btn_connect.Location = new System.Drawing.Point(58, 188);
             this.btn_connect.Name = "btn_connect";
             this.btn_connect.Size = new System.Drawing.Size(85, 40);
             this.btn_connect.TabIndex = 9;
@@ -123,7 +124,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10F);
-            this.label1.Location = new System.Drawing.Point(13, 70);
+            this.label1.Location = new System.Drawing.Point(59, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 16);
             this.label1.TabIndex = 7;
@@ -132,7 +133,7 @@
             // tb_port_setting
             // 
             this.tb_port_setting.Font = new System.Drawing.Font("Arial", 10F);
-            this.tb_port_setting.Location = new System.Drawing.Point(61, 67);
+            this.tb_port_setting.Location = new System.Drawing.Point(107, 159);
             this.tb_port_setting.Name = "tb_port_setting";
             this.tb_port_setting.Size = new System.Drawing.Size(139, 23);
             this.tb_port_setting.TabIndex = 6;
@@ -142,7 +143,7 @@
             // tb_ipaddress_setting
             // 
             this.tb_ipaddress_setting.Font = new System.Drawing.Font("Arial", 10F);
-            this.tb_ipaddress_setting.Location = new System.Drawing.Point(61, 38);
+            this.tb_ipaddress_setting.Location = new System.Drawing.Point(107, 130);
             this.tb_ipaddress_setting.Name = "tb_ipaddress_setting";
             this.tb_ipaddress_setting.Size = new System.Drawing.Size(139, 23);
             this.tb_ipaddress_setting.TabIndex = 6;
@@ -153,7 +154,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10F);
-            this.label2.Location = new System.Drawing.Point(13, 41);
+            this.label2.Location = new System.Drawing.Point(59, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 7;
@@ -187,11 +188,23 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Error Log";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 40F);
+            this.label6.Location = new System.Drawing.Point(67, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(166, 61);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "Client";
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1308, 567);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lv_handle_client);
@@ -206,8 +219,8 @@
             this.Controls.Add(this.tb_port_setting);
             this.Name = "ClientForm";
             this.Text = "MainForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ClientForm_Closed);
             this.Load += new System.EventHandler(this.ClientForm_Load);
-            this.FormClosed += new System.EventHandler(this.ClientForm_Closed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,6 +244,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox rtb_error_log;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

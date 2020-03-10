@@ -23,6 +23,8 @@ namespace Server_Client
         Socket MainSocket;
         List<AsyncObject> HandleClients;
 
+        private delegate void lvUpdate();
+
         private void btn_server_start_Click(object sender, EventArgs e)
         {
             InitMainSocket();
@@ -37,6 +39,7 @@ namespace Server_Client
 
             btn_server_start.Enabled = true;
             btn_server_stop.Enabled = false;
+            tb_port_setting.Enabled = true;
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -83,6 +86,9 @@ namespace Server_Client
             try
             { 
                 Socket Client = MainSocket.EndAccept(_async_res);
+
+                Socket e = new Socket(SocketType.Stream,ProtocolType.Tcp);
+
 
                 AsyncObject obj = new AsyncObject(4096);
                 obj.working_socket = Client;
@@ -152,24 +158,35 @@ namespace Server_Client
             }
         }
 
+        /// <summary>
+        /// 접속중인 클라이언트 리스트를 리스트뷰에 갱신한다.
+        /// </summary>
         private void RefreshHandledClientListview()
         {
-            lv_handle_client.BeginUpdate();
-            lv_handle_client.Items.Clear();
-
-            ListViewItem item;
-            foreach (AsyncObject o in HandleClients)
+            if(this.lv_handle_client.InvokeRequired)
             {
-                item = new ListViewItem(o.working_socket.Handle.ToString());
-
-                item.SubItems.Add($"{o.working_socket.Connected}");
-                item.SubItems.Add($"{o.buffer_size}");
-                item.SubItems.Add($"{o.received_buffer.Length}");
-
-                lv_handle_client.Items.Add(item);
+                this.Invoke(new lvUpdate(RefreshHandledClientListview));
             }
 
-            lv_handle_client.EndUpdate();
+            else
+            {
+                lv_handle_client.BeginUpdate();
+                lv_handle_client.Items.Clear();
+
+                ListViewItem item;
+                foreach (AsyncObject o in HandleClients)
+                {
+                    item = new ListViewItem(o.working_socket.Handle.ToString());
+
+                    item.SubItems.Add($"{o.working_socket.Connected}");
+                    item.SubItems.Add($"{o.buffer_size}");
+                    item.SubItems.Add($"{o.received_buffer.Length}");
+
+                    lv_handle_client.Items.Add(item);
+                }
+
+                lv_handle_client.EndUpdate();
+            }
         }
 
 

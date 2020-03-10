@@ -37,17 +37,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lv_handle_client = new System.Windows.Forms.ListView();
-            this.label4 = new System.Windows.Forms.Label();
             this.ch_handle = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_connected = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_buffersize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ch_bufferlength = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tb_port_setting
             // 
             this.tb_port_setting.Font = new System.Drawing.Font("Arial", 10F);
-            this.tb_port_setting.Location = new System.Drawing.Point(60, 35);
+            this.tb_port_setting.Location = new System.Drawing.Point(60, 96);
             this.tb_port_setting.Name = "tb_port_setting";
             this.tb_port_setting.Size = new System.Drawing.Size(85, 23);
             this.tb_port_setting.TabIndex = 0;
@@ -59,7 +60,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10F);
-            this.label1.Location = new System.Drawing.Point(12, 38);
+            this.label1.Location = new System.Drawing.Point(12, 99);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 16);
             this.label1.TabIndex = 1;
@@ -68,7 +69,7 @@
             // btn_server_start
             // 
             this.btn_server_start.Font = new System.Drawing.Font("Arial", 10F);
-            this.btn_server_start.Location = new System.Drawing.Point(164, 26);
+            this.btn_server_start.Location = new System.Drawing.Point(164, 87);
             this.btn_server_start.Name = "btn_server_start";
             this.btn_server_start.Size = new System.Drawing.Size(61, 40);
             this.btn_server_start.TabIndex = 2;
@@ -79,7 +80,7 @@
             // btn_server_stop
             // 
             this.btn_server_stop.Font = new System.Drawing.Font("Arial", 10F);
-            this.btn_server_stop.Location = new System.Drawing.Point(236, 26);
+            this.btn_server_stop.Location = new System.Drawing.Point(236, 87);
             this.btn_server_stop.Name = "btn_server_stop";
             this.btn_server_stop.Size = new System.Drawing.Size(61, 40);
             this.btn_server_stop.TabIndex = 2;
@@ -131,22 +132,12 @@
             this.ch_buffersize,
             this.ch_bufferlength});
             this.lv_handle_client.HideSelection = false;
-            this.lv_handle_client.Location = new System.Drawing.Point(8, 107);
+            this.lv_handle_client.Location = new System.Drawing.Point(8, 150);
             this.lv_handle_client.Name = "lv_handle_client";
-            this.lv_handle_client.Size = new System.Drawing.Size(297, 331);
+            this.lv_handle_client.Size = new System.Drawing.Size(297, 288);
             this.lv_handle_client.TabIndex = 5;
             this.lv_handle_client.UseCompatibleStateImageBehavior = false;
             this.lv_handle_client.View = System.Windows.Forms.View.Details;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 10F);
-            this.label4.Location = new System.Drawing.Point(12, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "HandledClient";
             // 
             // ch_handle
             // 
@@ -166,10 +157,31 @@
             this.ch_bufferlength.Text = "LeftBuffer";
             this.ch_bufferlength.Width = 89;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 10F);
+            this.label4.Location = new System.Drawing.Point(12, 131);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "HandledClient";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 40F);
+            this.label5.Location = new System.Drawing.Point(58, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(186, 61);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Server";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1324, 450);
             this.Controls.Add(this.lv_handle_client);
             this.Controls.Add(this.label4);
@@ -179,6 +191,7 @@
             this.Controls.Add(this.btn_server_stop);
             this.Controls.Add(this.btn_server_start);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tb_port_setting);
             this.Name = "MainForm";
@@ -205,6 +218,7 @@
         private System.Windows.Forms.ColumnHeader ch_connected;
         private System.Windows.Forms.ColumnHeader ch_buffersize;
         private System.Windows.Forms.ColumnHeader ch_bufferlength;
+        private System.Windows.Forms.Label label5;
     }
 }
 
