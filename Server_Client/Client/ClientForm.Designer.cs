@@ -35,16 +35,16 @@
             this.ch_bufferlength = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label4 = new System.Windows.Forms.Label();
             this.rtb_client_log = new System.Windows.Forms.RichTextBox();
-            this.btn_disconnect = new System.Windows.Forms.Button();
-            this.btn_connect = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tb_port_setting = new System.Windows.Forms.TextBox();
-            this.tb_ipaddress_setting = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.rtb_error_log = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tb_port_setting = new System.Windows.Forms.TextBox();
+            this.tb_ipaddress_setting = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_connect = new System.Windows.Forms.Button();
+            this.btn_disconnect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lv_handle_client
@@ -98,68 +98,6 @@
             this.rtb_client_log.TabIndex = 10;
             this.rtb_client_log.Text = "";
             // 
-            // btn_disconnect
-            // 
-            this.btn_disconnect.Font = new System.Drawing.Font("Arial", 10F);
-            this.btn_disconnect.Location = new System.Drawing.Point(160, 188);
-            this.btn_disconnect.Name = "btn_disconnect";
-            this.btn_disconnect.Size = new System.Drawing.Size(86, 40);
-            this.btn_disconnect.TabIndex = 8;
-            this.btn_disconnect.Text = "Disconnect";
-            this.btn_disconnect.UseVisualStyleBackColor = true;
-            this.btn_disconnect.Click += new System.EventHandler(this.btn_disconnect_Click);
-            // 
-            // btn_connect
-            // 
-            this.btn_connect.Font = new System.Drawing.Font("Arial", 10F);
-            this.btn_connect.Location = new System.Drawing.Point(58, 188);
-            this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(85, 40);
-            this.btn_connect.TabIndex = 9;
-            this.btn_connect.Text = "Connect";
-            this.btn_connect.UseVisualStyleBackColor = true;
-            this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 10F);
-            this.label1.Location = new System.Drawing.Point(59, 162);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Port  :";
-            // 
-            // tb_port_setting
-            // 
-            this.tb_port_setting.Font = new System.Drawing.Font("Arial", 10F);
-            this.tb_port_setting.Location = new System.Drawing.Point(107, 159);
-            this.tb_port_setting.Name = "tb_port_setting";
-            this.tb_port_setting.Size = new System.Drawing.Size(139, 23);
-            this.tb_port_setting.TabIndex = 6;
-            this.tb_port_setting.Text = "4426";
-            this.tb_port_setting.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // tb_ipaddress_setting
-            // 
-            this.tb_ipaddress_setting.Font = new System.Drawing.Font("Arial", 10F);
-            this.tb_ipaddress_setting.Location = new System.Drawing.Point(107, 130);
-            this.tb_ipaddress_setting.Name = "tb_ipaddress_setting";
-            this.tb_ipaddress_setting.Size = new System.Drawing.Size(139, 23);
-            this.tb_ipaddress_setting.TabIndex = 6;
-            this.tb_ipaddress_setting.Text = "127.0.0.1";
-            this.tb_ipaddress_setting.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 10F);
-            this.label2.Location = new System.Drawing.Point(59, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "IP     :";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -198,12 +136,74 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Client";
             // 
+            // tb_port_setting
+            // 
+            this.tb_port_setting.Font = new System.Drawing.Font("Arial", 10F);
+            this.tb_port_setting.Location = new System.Drawing.Point(107, 159);
+            this.tb_port_setting.Name = "tb_port_setting";
+            this.tb_port_setting.Size = new System.Drawing.Size(139, 23);
+            this.tb_port_setting.TabIndex = 6;
+            this.tb_port_setting.Text = "4426";
+            this.tb_port_setting.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // tb_ipaddress_setting
+            // 
+            this.tb_ipaddress_setting.Font = new System.Drawing.Font("Arial", 10F);
+            this.tb_ipaddress_setting.Location = new System.Drawing.Point(107, 130);
+            this.tb_ipaddress_setting.Name = "tb_ipaddress_setting";
+            this.tb_ipaddress_setting.Size = new System.Drawing.Size(139, 23);
+            this.tb_ipaddress_setting.TabIndex = 6;
+            this.tb_ipaddress_setting.Text = "127.0.0.1";
+            this.tb_ipaddress_setting.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 10F);
+            this.label1.Location = new System.Drawing.Point(59, 162);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 16);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Port  :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 10F);
+            this.label2.Location = new System.Drawing.Point(59, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "IP     :";
+            // 
+            // btn_connect
+            // 
+            this.btn_connect.Font = new System.Drawing.Font("Arial", 10F);
+            this.btn_connect.Location = new System.Drawing.Point(58, 188);
+            this.btn_connect.Name = "btn_connect";
+            this.btn_connect.Size = new System.Drawing.Size(85, 40);
+            this.btn_connect.TabIndex = 9;
+            this.btn_connect.Text = "Connect";
+            this.btn_connect.UseVisualStyleBackColor = true;
+            this.btn_connect.Click += new System.EventHandler(this.btn_connect_Click);
+            // 
+            // btn_disconnect
+            // 
+            this.btn_disconnect.Font = new System.Drawing.Font("Arial", 10F);
+            this.btn_disconnect.Location = new System.Drawing.Point(160, 188);
+            this.btn_disconnect.Name = "btn_disconnect";
+            this.btn_disconnect.Size = new System.Drawing.Size(86, 40);
+            this.btn_disconnect.TabIndex = 8;
+            this.btn_disconnect.Text = "Disconnect";
+            this.btn_disconnect.UseVisualStyleBackColor = true;
+            this.btn_disconnect.Click += new System.EventHandler(this.btn_disconnect_Click);
+            // 
             // ClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1308, 567);
+            this.ClientSize = new System.Drawing.Size(318, 251);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -235,16 +235,16 @@
         private System.Windows.Forms.ColumnHeader ch_bufferlength;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox rtb_client_log;
-        private System.Windows.Forms.Button btn_disconnect;
-        private System.Windows.Forms.Button btn_connect;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tb_port_setting;
-        private System.Windows.Forms.TextBox tb_ipaddress_setting;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.RichTextBox rtb_error_log;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tb_port_setting;
+        private System.Windows.Forms.TextBox tb_ipaddress_setting;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_connect;
+        private System.Windows.Forms.Button btn_disconnect;
     }
 }
 
