@@ -33,6 +33,7 @@ namespace Client
             if (ClientSocket != null) ClientSocket.Dispose();
         }
       
+        // 버튼 클릭시
         private void btn_connect_Click(object sender, EventArgs e)
         {
             try
